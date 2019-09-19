@@ -6,8 +6,9 @@ The collected data includes several features such as humidity,pressure,wind dire
 carbonDioxide.
 
 
-Good results have already been achieved by us with the help of neural networks and GBDT.Howerver,the data is relatively small and the 
-results still need to be improved.
+Good results have already been achieved by us with the help of neural networks and GBDT.
+![Image text](https://raw.githubusercontent.com/QuLiao1117/TempreturePrediction/master/img/result.png)
+Howerver,the data is relatively small and the results still need to be improved.
 
 
 Your help will definitely be welcomed by us.
