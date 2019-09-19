@@ -4,7 +4,7 @@ import numpy as np
 import datetime
 import time
 #预处理数据
-def preprocess(fileData,start_time,end_time):
+def preprocess(fileData,start_time,end_time,hour):
     # 数据清洗、基础的预处理
     # 这里开始考虑选取那些feature
     # 选取Time，Temperature，Pressure，Humidity作为输入信息，删除其他的列
@@ -45,7 +45,7 @@ def preprocess(fileData,start_time,end_time):
     startMask = np.array(data[:,0] >= startTime, dtype='bool')
     endMask = np.array(data[:,0] <= endTime, dtype='bool')
     myData = data[startMask & endMask,:]
-    data1 = dataPreprocess(myData, 15, 60)
+    data1 = dataPreprocess(myData, 15, hour*60)
     np.save("dataSet.npy", data1)
     #save = pd.DataFrame(data1)
     #save.to_csv('.\\abc.csv',index=False,header=False)  
